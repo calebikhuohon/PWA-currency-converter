@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <meta name="theme-color" content="#1a237e" />
+  <link rel="shortcut icon" href="./icon.png" />
+  <title>💰 Converter</title>
+
+  <!-- CSS  -->
+  <link rel="manifest" href="/manifest.json">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link rel="stylesheet" defer href="https://use.fontawesome.com/releases/v5.1.0/css/solid.css" integrity="sha384-TbilV5Lbhlwdyc4RuIV/JhD8NR+BfMrvz4BL5QFa2we1hQu6wvREr3v6XSRfCTRp"
+    crossorigin="anonymous">
+  <link rel="stylesheet" defer href="https://use.fontawesome.com/releases/v5.1.0/css/fontawesome.css" integrity="sha384-ozJwkrqb90Oa3ZNb+yKFW2lToAWYdTiF1vt8JiH5ptTGHTGcN7qdoR1F95e0kYyG"
+    crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="indigo darken-4" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">
+        💰 Converter
+      </a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br>
+      <br>
+      <br>
+      <div class="row center">
+        <h5 class="header col s12 light">Select Currencies To Convert </h5>
+      </div>
+      <br>
+
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <div id="conversion_display" class="row center hide">
+
+      </div>
+
+      <div id="loader" class="row center hide">
+        <div class="preloader-wrapper big active">
+          <div class="spinner-layer spinner-indigo" style="border-color: indigo">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12 m12">
+          <div class="input-field col s12 m8 offset-m2">
+            <select onchange="checkBtnState()" id="currency_1" class="currency_select">
+              <option value="" disabled selected>Select currency</option>
+            </select>
+            <label>From</label>
+          </div>
+        </div>
+
+
+        <div class="col s12 m12">
+          <div class="input-field col s12 m8 offset-m2">
+            <select onchange="checkBtnState()" id="currency_2" class="currency_select">
+              <option value="" disabled selected>Select currency</option>
+            </select>
+            <label>To</label>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+
+
+      <div class="row">
+        <div class="col s12 m12">
+          <div class="input-field col s12 m8 offset-m2">
+            <input id="amount" oninput="checkBtnState()" type="number" class="validate">
+            <label for="amount">Amount</label>
+          </div>
+        </div>
+
+
+        <div id="result_box" class="col s12 m12">
+          <div class="input-field col s12 m8 offset-m2">
+            <input id="result" readonly type="number">
+            <label for="result">Result</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row center">
+        <button id="convert_btn" onClick="convert()" class="waves-effect waves-light btn-large indigo">
+          <i class="material-icons left">repeat</i>Convert</button>
+      </div>
+
+    </div>
+    <br>
+    <br>
+  </div>
+
+  <footer class="page-footer indigo darken-4">
+    <div class="footer-copyright center indigo darken-4 " style="padding-bottom: 10px">
+      <h6 class="right-center"> Made with
+        <i class="fas fa-heart"></i> by
+        <a class="white-text" target="_blank" href="https://github.com/thecodearcher">thecodearcher🏹 </a>
+      </h6>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/idb.js"></script>
+  <script src="js/main.js"></script>
+  <script type="text/javascript">
+  </script>
+
+</body>
+
+</html>

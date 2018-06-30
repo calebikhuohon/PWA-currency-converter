@@ -1,0 +1,20 @@
+{
+    "name": "💰 Converter",
+    "short_name": "💰Converter",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#1a237e",
+    "icons": [
+        {
+            "src": "icon.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "icon.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        }
+    ],
+    "theme_color": "#1a237e"
+}
