@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
  if ('serviceWorker' in navigator) {
-   navigator.serviceWorker.register(`${window.location.origin}/sw.js`)
+   navigator.serviceWorker.register("../sw.js")
      .then(() => console.log("[Service Worker] successfully register"))
      .catch((e) => console.log(e, "[Service Worker] An error occured"))
  } else {
